@@ -6,4 +6,7 @@ public class FiksniBroj implements TelefonskiBroj {
     return c;
     }
 
+    public FiksniBroj(Grad grad, String broj) {
+
+    }
 }
