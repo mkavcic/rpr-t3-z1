@@ -11,6 +11,8 @@ public class MobilniBroj implements TelefonskiBroj{
 
 
     public String ispisi() {
-    return "";
+        String c = "";
+        c += 0 + mobilnaMreza + "/" + broj;
+        return c;
     }
 }
