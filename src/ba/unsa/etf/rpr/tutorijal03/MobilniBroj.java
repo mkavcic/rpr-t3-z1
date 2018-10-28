@@ -9,7 +9,6 @@ public class MobilniBroj implements TelefonskiBroj{
         this.broj = broj;
     }
 
-
     public String ispisi() {
         String c = "";
         c += 0 + mobilnaMreza + "/" + broj;
