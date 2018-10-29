@@ -2,10 +2,12 @@ package ba.unsa.etf.rpr.tutorijal03;
 
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Set;
 
 
 public class Imenik {
-    private HashMap imenikPoImenu, imenikPoBroju;
+    private HashMap <String,TelefonskiBroj>imenikPoImenu = new HashMap<>();
+    private HashMap <TelefonskiBroj, String> imenikPoBroju = new HashMap<>();
     public void dodaj(String ime, TelefonskiBroj broj){
         imenikPoBroju.put(broj, ime);
         imenikPoImenu.put(ime, broj);
@@ -29,14 +31,16 @@ public class Imenik {
     public String naSlovo(char s){
         Iterator it=imenikPoImenu.entrySet().iterator();
         while(it.hasNext()){
-        
+
         }
         return null;
     }
 
-   /* public Set<String> izGrada(Grad g){
-         Set s[];
-         if()
+    public Set<String> izGrada(){
+        return null;
+    }
 
-    }*/
+    public Set<TelefonskiBroj> izGradaBrojevi(){
+        return null;
+    }
 }
