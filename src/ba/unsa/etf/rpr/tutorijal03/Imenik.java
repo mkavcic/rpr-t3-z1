@@ -5,6 +5,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 
+
 public class Imenik {
     private HashMap <String,TelefonskiBroj>imenikPoImenu = new HashMap<>();
     private HashMap <TelefonskiBroj, String> imenikPoBroju = new HashMap<>();
@@ -36,11 +37,11 @@ public class Imenik {
         return null;
     }
 
-    public Set<String> izGrada(){
+    public Set<String> izGrada(FiksniBroj.Grad g){
         return null;
     }
 
-    public Set<TelefonskiBroj> izGradaBrojevi(){
+    public Set<TelefonskiBroj> izGradaBrojevi(FiksniBroj.Grad g) {
         return null;
     }
 }

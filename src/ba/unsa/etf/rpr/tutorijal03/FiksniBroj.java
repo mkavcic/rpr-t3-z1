@@ -2,19 +2,18 @@ package ba.unsa.etf.rpr.tutorijal03;
 
 public class FiksniBroj implements TelefonskiBroj {
     public enum Grad {
-        TRAVNIK(30), ORASJE(31), ZENICA(32), SARAJEVO(33), LIVNO(34), TUZLA(35), MOSTAR(36), BIHAC(37), GORAZDE(38), SIROKI_BRIJEG(39), BRCKO(49), MRKONJIC_GRAD(50), BANJA_LUKA(51), PRIJEDOR(52), DOBOJ(53), SAMAC(54), BIJELJINA(55), ZVORNIK(56), PALE(57), FOCA(58), TREBINJE(59);
-        private int br;
-
-        Grad(int i) {
-            this.br = i;
-        }
+        TRAVNIK, ORASJE, ZENICA, SARAJEVO, LIVNO, TUZLA, MOSTAR, BIHAC, GORAZDE, SIROKI_BRIJEG, BRCKO, MRKONJIC_GRAD, BANJA_LUKA, PRIJEDOR, DOBOJ, SAMAC, BIJELJINA, ZVORNIK, PALE, FOCA, TREBINJE
     }
     private Grad grad;
     private String broj;
 
     public String ispisi() {
         String c = "";
-        c += 0 + grad.ordinal() + "/" + broj;
+        int konstanta=0;
+        if(grad.ordinal()<10) konstanta =30;
+        else if(grad.ordinal()==10) konstanta=40;
+        else konstanta=50;
+        c += "0" + (grad.ordinal()+konstanta) + "/" + broj;
         return c;
     }
 
