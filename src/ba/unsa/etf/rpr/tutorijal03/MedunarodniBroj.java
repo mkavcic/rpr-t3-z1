@@ -13,4 +13,19 @@ public class MedunarodniBroj implements TelefonskiBroj{
     public String ispisi() {
         return null;
     }
+
+    @Override
+    public int hashCode(){
+        return drzava.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object o){
+        if(o==null) return false;
+        else if(o instanceof MedunarodniBroj){
+            MedunarodniBroj a=(MedunarodniBroj) o;
+            if(a.broj.equals(this.broj) && a.hashCode() == this.drzava.hashCode()) return true;
+        }
+        return false;
+    }
 }
