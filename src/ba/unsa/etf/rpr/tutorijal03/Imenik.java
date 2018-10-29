@@ -20,6 +20,13 @@ public class Imenik {
     return null;
     }
 
+    public String dajIme(TelefonskiBroj broj){
+        if(imenikPoBroju.containsKey(broj)){
+            return (String) imenikPoBroju.get(broj);
+        }
+        return null;
+    }
+
    /* public Set<String> izGrada(Grad g){
          Set s[];
          if()
