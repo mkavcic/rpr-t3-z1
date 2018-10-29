@@ -14,4 +14,19 @@ public class FiksniBroj implements TelefonskiBroj {
         this.grad = grad;
         this.broj = broj;
     }
+
+    @Override
+     public int hashCode(){
+        return grad.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object o){
+        if(o==null) return false;
+        else if(o instanceof FiksniBroj){
+            FiksniBroj a=(FiksniBroj) o;
+            if(a.broj.equals(this.broj) && a.hashCode() == this.grad.hashCode()) return true;
+        }
+        return false;
+    }
 }
