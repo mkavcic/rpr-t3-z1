@@ -12,13 +12,13 @@ public class Imenik {
         imenikPoImenu.put(ime, broj);
     }
 
-    /*public String dajBroj(String ime){
-        Iterator i=h.entrySet().iterator();
-        while(i.hasNext()){
-           Set s= (Set) i.next();
-        }
-    return "";
-    }*/
+    public String dajBroj(String ime){
+       if(imenikPoImenu.containsKey(ime)){
+           TelefonskiBroj telefonskiBroj= (TelefonskiBroj) imenikPoImenu.get(ime);
+           return telefonskiBroj.ispisi();
+       }
+    return null;
+    }
 
    /* public Set<String> izGrada(Grad g){
          Set s[];
