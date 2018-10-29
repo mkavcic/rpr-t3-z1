@@ -2,8 +2,7 @@ package ba.unsa.etf.rpr.tutorijal03;
 
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Set;
-//import java.util.Map;
+
 
 public class Imenik {
     private HashMap imenikPoImenu, imenikPoBroju;
@@ -23,6 +22,14 @@ public class Imenik {
     public String dajIme(TelefonskiBroj broj){
         if(imenikPoBroju.containsKey(broj)){
             return (String) imenikPoBroju.get(broj);
+        }
+        return null;
+    }
+
+    public String naSlovo(char s){
+        Iterator it=imenikPoImenu.entrySet().iterator();
+        while(it.hasNext()){
+        
         }
         return null;
     }
