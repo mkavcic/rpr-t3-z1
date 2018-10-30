@@ -24,6 +24,10 @@ public class FiksniBroj implements TelefonskiBroj {
 
     }
 
+    public Grad getGrad() {
+        return grad;
+    }
+
     public FiksniBroj(Grad grad, String broj) {
         this.grad = grad;
         this.broj = broj;
