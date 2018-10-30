@@ -55,7 +55,10 @@ public class Imenik {
 
     public Set<TelefonskiBroj> izGradaBrojevi(FiksniBroj.Grad g) {
         Set<TelefonskiBroj> s=new TreeSet<>();
-
+        for(Map.Entry<String, TelefonskiBroj> entry: imenik.entrySet()){
+            TelefonskiBroj broj=entry.getValue();
+            if(broj instanceof FiksniBroj && g.equals(((FiksniBroj) broj).getGrad())) s.add(broj);
+        }
         return s;
     }
 }
