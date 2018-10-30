@@ -36,9 +36,10 @@ public class Imenik {
             String pocetni="";
             int i=0;
             if(ime.charAt(0)==s){
-                String pomocni=String.format("%d. %s/%s-%s \n", i,ime, broj);
+                String pomocni=String.format("%d. %s/%s-%s \n", i, ime, broj);
                 pocetni+=pomocni;
             }
+            i++;
         }
         return null;
     }
