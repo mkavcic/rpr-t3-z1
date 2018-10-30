@@ -34,9 +34,9 @@ public class Imenik {
             String ime=(String) par.getKey();
             String broj=par.getValue().ispisi();
             String pocetni="";
-            int i=0;
+            int i=1;
             if(ime.charAt(0)==s){
-                String pomocni=String.format("%d. %s/%s-%s \n", i, ime, broj);
+                String pomocni=String.format("%d. %s %s \n", i, ime, broj);
                 pocetni+=pomocni;
             }
             i++;
