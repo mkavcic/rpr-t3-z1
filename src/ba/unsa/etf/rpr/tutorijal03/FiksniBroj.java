@@ -25,7 +25,7 @@ public class FiksniBroj implements TelefonskiBroj {
         if(grad.ordinal()<10) konstanta =30;
         else if(grad.ordinal()==10) konstanta=40;
         else konstanta=50;
-        c += "0" + (grad.ordinal()+konstanta) + "/" + broj;
+        c += grad + "/" + broj;
         return c;
     }
 
