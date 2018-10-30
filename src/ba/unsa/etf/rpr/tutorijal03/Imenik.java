@@ -1,7 +1,6 @@
 package ba.unsa.etf.rpr.tutorijal03;
 
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Set;
 import java.util.Map;
 
@@ -30,18 +29,18 @@ public class Imenik {
     }
 
     public String naSlovo(char s){
+        String pocetni="";
         for(Map.Entry<String, TelefonskiBroj> par: imenik.entrySet()){
-            String ime=(String) par.getKey();
+            String ime=par.getKey();
             String broj=par.getValue().ispisi();
-            String pocetni="";
             int i=1;
             if(ime.charAt(0)==s){
-                String pomocni=String.format("%d. %s %s \n", i, ime, broj);
+                String pomocni=String.format("%d. %s - %s \n", i, ime, broj);
                 pocetni+=pomocni;
             }
             i++;
         }
-        return null;
+        return pocetni;
     }
 
     public Set<String> izGrada(FiksniBroj.Grad g){
