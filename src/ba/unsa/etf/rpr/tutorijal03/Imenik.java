@@ -3,41 +3,48 @@ package ba.unsa.etf.rpr.tutorijal03;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
+import java.util.Map;
 
 
 
 public class Imenik {
-    private HashMap <String,TelefonskiBroj>imenikPoImenu = new HashMap<>();
-    private HashMap <TelefonskiBroj, String> imenikPoBroju = new HashMap<>();
+    private HashMap <String,TelefonskiBroj> imenik= new HashMap<>();
+
     public void dodaj(String ime, TelefonskiBroj broj){
-        imenikPoBroju.put(broj, ime);
-        imenikPoImenu.put(ime, broj);
+        imenik.put(ime, broj);
     }
 
     public String dajBroj(String ime){
-       if(imenikPoImenu.containsKey(ime)){
-           TelefonskiBroj telefonskiBroj= (TelefonskiBroj) imenikPoImenu.get(ime);
+       if(imenik.containsKey(ime)){
+           TelefonskiBroj telefonskiBroj= (TelefonskiBroj) imenik.get(ime);
            return telefonskiBroj.ispisi();
        }
     return null;
     }
 
     public String dajIme(TelefonskiBroj broj){
-        if(imenikPoBroju.containsKey(broj)){
-            return (String) imenikPoBroju.get(broj);
+        for(Map.Entry<String, TelefonskiBroj> par: imenik.entrySet()){
+            if(par.getValue()==broj) return par.getKey();
         }
         return null;
     }
 
     public String naSlovo(char s){
-        Iterator it=imenikPoImenu.entrySet().iterator();
-        while(it.hasNext()){
-
+        for(Map.Entry<String, TelefonskiBroj> par: imenik.entrySet()){
+            String ime=(String) par.getKey();
+            String broj=par.getValue().ispisi();
+            String pocetni="";
+            int i=0;
+            if(ime.charAt(0)==s){
+                String pomocni=String.format("%d. %s/%s-%s \n", i,ime, broj);
+                pocetni+=pomocni;
+            }
         }
         return null;
     }
 
     public Set<String> izGrada(FiksniBroj.Grad g){
+
         return null;
     }
 
