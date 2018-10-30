@@ -20,13 +20,8 @@ public class FiksniBroj implements TelefonskiBroj {
     private String broj;
 
     public String ispisi() {
-        String c = "";
-        int konstanta=0;
-        if(grad.ordinal()<10) konstanta =30;
-        else if(grad.ordinal()==10) konstanta=40;
-        else konstanta=50;
-        c += grad + "/" + broj;
-        return c;
+        return grad.toString() + "/" + broj;
+
     }
 
     public FiksniBroj(Grad grad, String broj) {
