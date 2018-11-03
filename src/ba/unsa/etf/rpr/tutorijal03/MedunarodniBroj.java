@@ -11,7 +11,7 @@ public class MedunarodniBroj extends TelefonskiBroj{
 
     @Override
     public String ispisi() {
-        String c="+"+drzava+broj;
+        String c=drzava+broj;
         return c;
     }
 
