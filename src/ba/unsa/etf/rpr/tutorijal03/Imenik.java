@@ -23,7 +23,7 @@ public class Imenik {
 
     public String dajIme(TelefonskiBroj broj){
         for(Map.Entry<String, TelefonskiBroj> par: imenik.entrySet()){
-            if(par.getValue()==broj) return par.getKey();
+            if(par.getValue().equals(broj)) return par.getKey();
         }
         return null;
     }
